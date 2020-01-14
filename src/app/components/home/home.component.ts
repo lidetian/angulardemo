@@ -22,9 +22,25 @@ export class HomeComponent implements OnInit {
   public attr:string = "blue";
 
   public today:any = new Date();
+
+  public keywords:string = "default";
   constructor() { }
 
   ngOnInit() {
   }
 
+  run(){
+    alert(this.picUrl);
+  }
+  keyDown(e){
+    console.log(e.target.value);
+  }
+
+  change(){
+     this.keywords = "changed";
+  }
+
+  getWords(){
+    console.log(this.keywords);
+ }
 }

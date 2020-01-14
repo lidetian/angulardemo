@@ -45,3 +45,19 @@
 
 <hr>
 {{today | date:'yyyy-MM-dd'}}
+
+<hr>
+<button (click)="run()">click me</button>
+
+<hr>
+<input type="text" name="" id="" (keyup)="keyDown($event)">
+
+<hr>
+<input type="text" [(ngModel)]="keywords">
+<br>
+{{keywords}}
+
+<br>
+<button (click)="change()">change</button>
+<br>
+<button (click)="getWords()">getWords</button>
