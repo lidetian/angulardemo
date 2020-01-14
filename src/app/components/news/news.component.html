@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<h2>{{userinfo.name}}</h2>
+<h3>{{message}}</h3>
+<hr>
+<div [title]="userinfo.name">
+    <p [innerHTML] = "content"></p>
+    1 + 2 = {{1 + 2}}
+</div>
+<hr>
+<div [innerHTML] = "content"></div>
+<hr>
+<ul>
+    <li *ngFor="let item of array; let i = index;">
+        {{item}}--{{i+1}}
+    </li>
+</ul>
+
+<hr>
+<ul>
+    <li template="ngFor let item of array;">
+        {{item}}
+    </li>
+</ul>
+
+<hr>
+<ul>
+    <li *ngFor="let item of userlist">
+        {{item.name}},{{item.age}}
+    </li>
+</ul>
