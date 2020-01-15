@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-todolist',
@@ -12,9 +13,14 @@ export class TodolistComponent implements OnInit {
   public todoList: any[] = [];
 
 
-  constructor() { }
+  constructor(public storageService:StorageService) { }
 
   ngOnInit() {
+    var storageTodoList:any = this.storageService.get('storageTodoList');
+    console.log(storageTodoList);
+    if(storageTodoList){
+      this.todoList = storageTodoList;
+    }
   }
 
   doAdd(e) {
@@ -25,11 +31,16 @@ export class TodolistComponent implements OnInit {
       });
       this.keyWord = "";
       console.log(this.todoList);
+      this.storageService.set("storageTodoList", this.todoList);
     }
   }
 
   doDelete(key) {
     this.todoList.splice(key, 1);
+    this.storageService.set("storageTodoList", this.todoList);
   }
 
+  changeCheckbox(){
+    this.storageService.set("storageTodoList", this.todoList);
+  }
 }
