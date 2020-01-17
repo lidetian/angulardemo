@@ -9,6 +9,8 @@ import { FormComponent } from './components/form/form.component';
 import { SearchComponent } from './components/search/search.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { StorageService } from './services/storage.service';
+import { DomComponent } from './components/dom/dom.component';
+import { TansitionComponent } from './components/tansition/tansition.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { StorageService } from './services/storage.service';
     HomeComponent,
     FormComponent,
     SearchComponent,
-    TodolistComponent
+    TodolistComponent,
+    DomComponent,
+    TansitionComponent
   ],
   imports: [
     BrowserModule,

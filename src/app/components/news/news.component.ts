@@ -27,7 +27,7 @@ export class NewsComponent implements OnInit {
     name : "houhou",
     age : 999
   }]
-  constructor() { 
+  constructor() {
     this.message = "呵呵";
 
     console.log(this.title);
@@ -37,6 +37,10 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  sayHi(){
+    console.log("hi, I am news!");
   }
 
 }
