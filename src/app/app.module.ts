@@ -11,6 +11,11 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 import { StorageService } from './services/storage.service';
 import { DomComponent } from './components/dom/dom.component';
 import { TansitionComponent } from './components/tansition/tansition.component';
+import { Footer9Component } from './components/footer9/footer9.component';
+import { Header9Component } from './components/header9/header9.component';
+import { Home9Component } from './components/home9/home9.component';
+import { News9Component } from './components/news9/news9.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { TansitionComponent } from './components/tansition/tansition.component';
     SearchComponent,
     TodolistComponent,
     DomComponent,
-    TansitionComponent
+    TansitionComponent,
+    Footer9Component,
+    Header9Component,
+    Home9Component,
+    News9Component,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
