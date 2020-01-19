@@ -16,6 +16,8 @@ import { Header9Component } from './components/header9/header9.component';
 import { Home9Component } from './components/home9/home9.component';
 import { News9Component } from './components/news9/news9.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { Home11Component } from './components/home11/home11.component';
+import { RequestService } from './services/request.service';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,14 @@ import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
     Header9Component,
     Home9Component,
     News9Component,
-    LifecycleComponent
+    LifecycleComponent,
+    Home11Component
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [StorageService],
+  providers: [StorageService, RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
