@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
@@ -18,6 +19,7 @@ import { News9Component } from './components/news9/news9.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { Home11Component } from './components/home11/home11.component';
 import { RequestService } from './services/request.service';
+import { News12Component } from './components/news12/news12.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +36,14 @@ import { RequestService } from './services/request.service';
     Home9Component,
     News9Component,
     LifecycleComponent,
-    Home11Component
+    Home11Component,
+    News12Component
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [StorageService, RequestService],
   bootstrap: [AppComponent]
